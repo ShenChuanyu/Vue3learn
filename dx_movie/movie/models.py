@@ -15,6 +15,15 @@ class Category(models.Model):
     category_name = models.CharField(max_length=100,verbose_name='分类名')
     # TextField支持长文本描述
     description = models.TextField(verbose_name='描述',blank=True)
+    def __str__(self):
+            return self.category_name
+    
+    class Meta:
+        #后台管理显示名字
+        verbose_name = '电影分类'
+        verbose_name_plural = '电影分类'
+        
+        
     
 # 地区
 class RegionChoices(TextChoices):
@@ -92,3 +101,8 @@ class Movie(models.Model):
         verbose_name='收藏用户',
         blank=True
     )
+    
+    class Meta:
+        #后台管理显示名字
+        verbose_name = '电影'
+        verbose_name_plural = '电影'

@@ -22,7 +22,7 @@ from movie import views
 #自动创建标准的REST接口
 router = DefaultRouter()
 #注册视图集和URL前缀
-router.register(r'movie',views.MovieViewSet)
+router.register(r'movies',views.MovieViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
